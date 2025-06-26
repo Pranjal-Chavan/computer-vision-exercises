@@ -8,3 +8,21 @@ This repository contains 4 basic hands-on OpenCV tasks for practicing computer v
 #Task 3 : Video playback Overplay : In this on each frame a text is overlayed showing elasped time and remaining time.
 
 #Task 4 : Side by Side Video Player : In this displaying the video side by side synchronized.
+
+#Task5 : This compares YOLOv8's person detection performance on different image sizes (`imgsz`) using the `yolov8n.pt` model. The goal is to observe the trade-offs between **accuracy** and **speed** when using lower vs higher image resolutions. - Use YOLOv8 to detect only persons (`classes=[0]`).
+- Test detection using:
+  - `imgsz = 320` (low resolution)
+  - `imgsz = 640` (high resolution)
+- Compare:
+  - Detection accuracy (especially on small/distant persons)
+  - Processing speed
+
+#Task 6 : - Person detection using `yolov8n.pt`
+- Tracks people across video frames
+- Detects line-crossing events across 3 custom lines
+- Counts how many people crossed from:
+  - Line 1 ➝ Line 2 or 3
+  - Line 2 ➝ Line 1 or 3
+  - Line 3 ➝ Line 1 or 2
+- Saves annotated video with live count display
+- Modular code with easy customization
